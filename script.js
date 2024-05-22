@@ -1,9 +1,10 @@
+//global
 const UserData = document.getElementById("qrText");
 
 function Info() {
   const inputFromUser = UserData.value;
   ConditionChecker(inputFromUser);
-}
+}// getting user data
 
 function GenerateQR(text) {
   const imgBox = document.getElementById("imgBox");
@@ -30,7 +31,8 @@ function ConditionChecker(text) {
 
 function GetDomain(text) {
   try {
-    const url = new URL(text);
+      const url = new URL(text);
+      
     return url.hostname;
   } catch (error) {
     alert("Invalid URL");
