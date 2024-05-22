@@ -10,11 +10,13 @@ function GenerateQR(text) {
   const imgBox = document.getElementById("imgBox");
   imgBox.innerHTML = "";
   if (text) {
-    new QRCode(imgBox, {
+    const QRData = new QRCode(imgBox, {
       text: text,
       width: 128,
       height: 128,
     });
+      
+      console.log("qr", QRData._o.text)
   }
 }
 
@@ -38,8 +40,4 @@ function GetDomain(text) {
     alert("Invalid URL");
     return null;
   }
-}
-
-function Download(source) {
-    source.Download
 }
