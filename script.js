@@ -40,3 +40,6 @@ function GetDomain(text) {
   }
 }
 
+function Download(source) {
+    source.Download
+}

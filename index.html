@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR code</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-</head>
-<body>
-   <div class="container">
-    <p>Enter your text or url</p>
-    <input type="text" placeholder="Text or Url" id="qrText">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">
+        <p>Enter your url &hearts;</p>
+        <button class="downloadbtn" onclick="Download()"><i class="fas fa-download"></i></button>
+      </div>
+      <input type="text" placeholder="Text or Url" id="qrText" />
 
-    <div id="imgBox"></div>
-    <button onClick="Info()">Generate QR code</button>
-   </div>
+      <div id="imgBox"></div>
+      <button onClick="Info()" class="qr">Generate QR code</button>
+    </div>
 
-   <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
