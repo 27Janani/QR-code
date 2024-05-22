@@ -5,28 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR code</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
    <div class="container">
     <p>Enter your text or url</p>
     <input type="text" placeholder="Text or Url" id="qrText">
 
-    <div id=" imgBox">
-    <img src="" id="qrImage">
-    </div>
-    <button onClick="generateQR()">Generate QR code</button>
+    <div id="imgBox"></div>
+    <button onClick="Info()">Generate QR code</button>
    </div>
 
-   <script>
-
-
-let imgBox = document.getElementById("imgBox");
-let qrImage = document.getElementById("qrImage");
-let qrText = document.getElementById("qrText");
-
-    function generateQR(){
-   qrImage.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
-    }
-   </script>
+   <script src="./script.js"></script>
 </body>
 </html>
